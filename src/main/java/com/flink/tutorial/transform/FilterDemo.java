@@ -1,6 +1,7 @@
 package com.flink.tutorial.transform;
 
 import com.flink.tutorial.bean.WaterSensor;
+import com.flink.tutorial.funtion.FilterFunctionImpl;
 import com.flink.tutorial.funtion.MapFuntionImpl;
 import org.apache.flink.api.common.functions.FilterFunction;
 import org.apache.flink.api.common.functions.MapFunction;
@@ -29,6 +30,7 @@ public class FilterDemo {
 
 //        sensorDS.filter(sensor -> "s1".equals(sensor.getId()) ).print();
 
+        sensorDS.filter(new FilterFunctionImpl("s1")).print();
         //6.执行
         env.execute();
     }

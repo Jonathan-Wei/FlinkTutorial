@@ -37,5 +37,12 @@ public class WaterSensor {
         this.vc = vc;
     }
 
-
+    @Override
+    public String toString() {
+        return "WaterSensor{" +
+                "id='" + id + '\'' +
+                ", ts=" + ts +
+                ", vc=" + vc +
+                '}';
+    }
 }

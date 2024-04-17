@@ -14,6 +14,7 @@
         <spring-boot.version>3.0.2</spring-boot.version>
         <flink-version>1.17.0</flink-version>
         <mysql-version>8.0.27</mysql-version>
+        <scala.library.version>2.12.12</scala.library.version>
     </properties>
     <dependencies>
         <dependency>
@@ -59,7 +60,11 @@
             <artifactId>flink-connector-jdbc</artifactId>
             <version>3.0.0-1.16</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.flink</groupId>
+            <artifactId>flink-cep</artifactId>
+            <version>${flink-version}</version>
+        </dependency>
     </dependencies>
 
     <build>
